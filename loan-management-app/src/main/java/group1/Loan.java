@@ -25,12 +25,4 @@ public abstract class Loan {
 		System.out.println("Total amount payable: MWK " + calculateTotalPayable());
 	}
 	
-	
-		
-		
-	
-	
-	
-	
-
 }
