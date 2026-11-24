@@ -1,5 +1,13 @@
 package group1;
 
+public class BusinessLoan extends Loan { 
+  private String businessName;
+	public static final double intestRate = 12.0;
+	public static final int maxPeriodMonths = 24;
+	public static final double minAmount = 100000;
+	public static final double mixAmount = 1000000;
+	
+	public BusinessLoan(double principal,double interestRate,int repaymentPeriod) {
 public class BusinessLoan extends Loan {
 	private String businessName;
 	public BusinessLoan(double principal,double interestRate,int repaymentPeriod,String businessName) {
