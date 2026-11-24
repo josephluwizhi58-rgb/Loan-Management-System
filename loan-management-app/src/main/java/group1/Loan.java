@@ -35,7 +35,7 @@ public abstract class Loan {
 
 
 
-public abstract class Loan implements interestCalculato {
+public abstract class Loan implements caculateInterest {
 	protected double principal;
 	protected double interestRate;
 	protected int repaymentPeriod;
