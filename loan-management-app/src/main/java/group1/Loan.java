@@ -26,3 +26,36 @@ public abstract class Loan {
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+public abstract class Loan implements interestCalculato {
+	protected double principal;
+	protected double interestRate;
+	protected int repaymentPeriod;
+
+	public Loan (double principal, double interestRate, int repaymentPeriod) {
+		this.principal = principal;
+		this.interestRate = interestRate;
+		this.repaymentPeriod = repaymentPeriod;
+
+	// Absract - no body . The child class must give the answer
+@override
+	public abstract double calculateInterest();
+	
+		public double getPrincipal() {
+		return principal;
+	}
+		public double getInterestRate() {
+		return InterestRate; 
+	}
+			public double getRepaymentPeriod() {
+		return RepaymentPeriod; 
+	}
+		
