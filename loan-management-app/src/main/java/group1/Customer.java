@@ -113,6 +113,11 @@ public class Customer {
 		}
 		
 	    public void addCustomer(){
+
+			System.out.println("***********************************");
+			System.out.println("==== ADD CUSTOMER DETAILS ====");
+			System.out.println("***********************************");
+
 			System.out.println("Enter Customer Id: ");
 			this.customerId = scanner.nextLine();
 			System.out.println("Enter First Name: ");
@@ -164,28 +169,15 @@ public void saveCustomerToFile() {
         }
 }
 
-		public void viewCustomerInfo(){
-			System.out.println("Customer ID: " + getCustomerId());
-			System.out.println("Name " + getFirstName() + " " + getLastName());
-			System.out.println("Phone: " + getPhoneNumber());
-	    	System.out.println("Monthly Income: MKW " + getMonthlyIncome());
-	    	System.out.println("Email Address: " + getEmailAddress());
-	    	System.out.println("Physical Address: " + getPhysicalAddress());
-	    	System.out.println("Customer Status: " + getCustomerStatus());
-	    	System.out.println("National ID: " + getNationalId() );
-	    	System.out.println("Employment Status: " + getEmploymentStatus());
-	    	/*
-	    	System.out.println("Interent only: " + calculateInterest());
-			System.out.println("Total Payable: " + calculateTotalPayable());
-			System.out.println("Loan detail:  "+ displayLoanDetails());
-	    	 */
-		}
+
 		public void searchCustomer(){
 
 		   Scanner scanner = new Scanner(System.in);
 
-			System.out.println("Search by Customer ID, name, phoneNumber or NationalIdK: ");
-
+			System.out.println("************************************************************************************");
+			System.out.println("===== SEARCH CUSTOMER BY CUSTOMER ID, NAME, PHONE OR NATIONAL ID ===== ");
+			System.out.println("*************************************************************************************");
+			System.out.println("SEARCH CUSTOMER: ");
 			String searchValue = scanner.nextLine();
 
 			try (BufferedReader reader = new BufferedReader( new FileReader("customer.txt"))) {
@@ -203,7 +195,9 @@ public void saveCustomerToFile() {
 							data[3].equalsIgnoreCase(searchValue) ||
 							data[4].equalsIgnoreCase(searchValue)
 					) {
-						System.out.println("Customer Found !");
+						System.out.println("************************");
+						System.out.println("CUSTOMER FOUND!");
+						System.out.println("************************");
 						System.out.println("ID: " + data[0]);
 						System.out.println("FirstName: " + data[1]);
 						System.out.println("LastName: " + data[2]);
@@ -224,8 +218,28 @@ public void saveCustomerToFile() {
 			}
 		}
 
-		public void listAllCustomers(){
-			
+		public void viewAllCustomers(){
+			try {
+				BufferedReader reader = new BufferedReader( new FileReader("customer.txt"));
+				String line;
+
+				System.out.println("***************************");
+				System.out.println("==== ALL CUSTOMER LIST =====");
+				System.out.println("***************************");
+				System.out.println("                                                                                         ");
+				System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+				System.out.println("ID| f.Name| l.Name| NationalID| Phone| Email| Locatiion| Employement| Income | Status");
+				System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+				System.out.println("                                                                                         ");
+
+				while ((line = reader.readLine()) != null) {
+					System.out.println(line);
+				}
+
+				reader.close();
+			} catch (IOException e) {
+				System.out.println("Error Reading Customers: " + e.getMessage());
+			}
 		}
 }
 

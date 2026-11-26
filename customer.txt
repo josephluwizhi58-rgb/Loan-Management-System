@@ -1,4 +1,6 @@
-1, Mayamiko, Chabvi,MW01,mayamiko@gmail.com, Lilongwe,Employeed, 0992499374, 1.2E7, ACTIVE
-2, Vincent, Bitoni,MW03,biton@gmail.com, Dedza,Not Employeed, 0992789654, 700000.0, ACTIVE
-3, Tiyamike, Banda,MW04,banda@gmail.com, Mzuzu,Employeed, 0885910817, 8000000.0, ACTIVE
-Elube,Brenda,Gama,ITY78,gama@gmail.com,Likoma,Employeed,099876789,700000.0,ACTIVE
+1,Mayamiko,Chabvi,MVG56T,chabvimayamiko@gmail.com,Blantyre,Employeed,0995910817,1.2E7,ACTIVE
+2,Emily,Banda,KK67GT,banda@gmail.com,Bangwe,Employeed,0882499374,1000000.0,ACTIVE
+3,Aubry,Gondwe,H5TY7,gondwe@gmail.com,Likoma,Employeed,0976899709,800000.0,ACTIVE
+4,Jamiton,Linton,U67GR,linton@gmail.com,Zomba,Not Employeed,0897656786,5000000.0,ACTIVE
+6,Mayamiko,chisale,MJU799,tiya@gmail.com,Ntchewu,Not Employeed,09934567876,500000.0,ACTIVE
+7,Alfred,Phiri,YT678L,phiri@gmail.com,Kasungu,Employeed,0897678755,1000000.0,ACTIVE
