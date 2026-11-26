@@ -8,8 +8,8 @@ package group1;
 		
 		public EducationLoan(double principal,double interestRate,int repaymentPeriod,String passcode, String institutionName) {
 				super(principal,interestRate,repaymentPeriod);
-				this.passcode=passcode;
-				this.instituitionName=instituitionName;
+				this.passcode = passcode;
+				this.institutionName = institutionName;
 			}
 			@Override
 			public double  calculateInterest() {

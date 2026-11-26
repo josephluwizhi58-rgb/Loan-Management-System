@@ -28,13 +28,7 @@ public abstract class Loan {
 }
 
 
-
-
-
-
-
-
-
+/*
 public abstract class Loan implements caculateInterest {
 	protected double principal;
 	protected double interestRate;
@@ -45,17 +39,17 @@ public abstract class Loan implements caculateInterest {
 		this.interestRate = interestRate;
 		this.repaymentPeriod = repaymentPeriod;
 
-	// Absract - no body . The child class must give the answer
 @override
 	public abstract double calculateInterest();
-	
+
 		public double getPrincipal() {
 		return principal;
 	}
 		public double getInterestRate() {
-		return InterestRate; 
+		return InterestRate;
 	}
 			public double getRepaymentPeriod() {
-		return RepaymentPeriod; 
+		return RepaymentPeriod;
 	}
-		
+
+*/

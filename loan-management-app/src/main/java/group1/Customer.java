@@ -1,4 +1,5 @@
 package group1;
+import java.io.*;
 import java.util.Scanner;
 
 public class Customer {
@@ -28,6 +29,8 @@ public class Customer {
 		this.monthlyIncome = monthlyIncome;
 		this.customerStatus = customerStatus;
 		}
+
+        public Customer(){}
 		
 		public String getCustomerId() {
 			return customerId;
@@ -110,6 +113,8 @@ public class Customer {
 		}
 		
 	    public void addCustomer(){
+			System.out.println("Enter Customer Id: ");
+			this.customerId = scanner.nextLine();
 			System.out.println("Enter First Name: ");
 			this.firstName=scanner.nextLine();
 
@@ -136,8 +141,29 @@ public class Customer {
 			scanner.nextLine();
 
 			this.customerStatus="ACTIVE";
-	
+
+            saveCustomerToFile();
 		}
+
+
+public void saveCustomerToFile() {
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("customer.txt", true))) {
+
+            writer.write(
+             customerId + "," + firstName + "," +lastName + "," +
+           nationalId + "," + emailAddress + "," + physicalAddress + "," +
+            employmentStatus + "," + phoneNumber + "," + monthlyIncome + "," + customerStatus
+            );
+
+            writer.newLine();
+            System.out.println("Customer Saved Successfully");
+
+        } catch (IOException e) {
+            System.out.println("Customer Not Saved: " + e.getMessage());
+        }
+}
+
 		public void viewCustomerInfo(){
 			System.out.println("Customer ID: " + getCustomerId());
 			System.out.println("Name " + getFirstName() + " " + getLastName());
@@ -148,12 +174,54 @@ public class Customer {
 	    	System.out.println("Customer Status: " + getCustomerStatus());
 	    	System.out.println("National ID: " + getNationalId() );
 	    	System.out.println("Employment Status: " + getEmploymentStatus());
+	    	/*
 	    	System.out.println("Interent only: " + calculateInterest());
 			System.out.println("Total Payable: " + calculateTotalPayable());
-			System.out.println("Loan detail:  "+ displayLoanDetails(););
+			System.out.println("Loan detail:  "+ displayLoanDetails());
+	    	 */
 		}
 		public void searchCustomer(){
-			//search customer
+
+		   Scanner scanner = new Scanner(System.in);
+
+			System.out.println("Search by Customer ID, name, phoneNumber or NationalIdK: ");
+
+			String searchValue = scanner.nextLine();
+
+			try (BufferedReader reader = new BufferedReader( new FileReader("customer.txt"))) {
+
+				String line;
+
+				while ((line = reader.readLine()) != null) {
+
+					String[] data = line.split(",");
+
+					if (
+							data[0].equalsIgnoreCase(searchValue) ||
+							data[1].equalsIgnoreCase(searchValue) ||
+							data[2].equalsIgnoreCase(searchValue) ||
+							data[3].equalsIgnoreCase(searchValue) ||
+							data[4].equalsIgnoreCase(searchValue)
+					) {
+						System.out.println("Customer Found !");
+						System.out.println("ID: " + data[0]);
+						System.out.println("FirstName: " + data[1]);
+						System.out.println("LastName: " + data[2]);
+						System.out.println("NationalID: " + data[3]);
+						System.out.println("Phone: " + data[4]);
+						System.out.println("Email: " + data[5]);
+						System.out.println("PhysicalAddress: " + data[6]);
+						System.out.println("EmployementStatus: " + data[7]);
+						System.out.println("Income: " + data[8]);
+
+						return;
+					}
+				}
+				System.out.println("Customer not Found!!");
+
+			} catch (IOException e) {
+				System.out.println("Error Reading Customer File: " + e.getMessage());
+			}
 		}
 
 		public void listAllCustomers(){
@@ -161,4 +229,4 @@ public class Customer {
 		}
 }
 
-		
+		// C:\Users\GAMER\Documents\GitHub\Loan-Management-System\loan-management-app

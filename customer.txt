@@ -1,2 +1,4 @@
-
-M89HG, Mayamiko, Chabvi,UTY90,chabvi@gmail.com, Blantyre,Employed, 0995910817, 3000000.0, ACTIVE
+1, Mayamiko, Chabvi,MW01,mayamiko@gmail.com, Lilongwe,Employeed, 0992499374, 1.2E7, ACTIVE
+2, Vincent, Bitoni,MW03,biton@gmail.com, Dedza,Not Employeed, 0992789654, 700000.0, ACTIVE
+3, Tiyamike, Banda,MW04,banda@gmail.com, Mzuzu,Employeed, 0885910817, 8000000.0, ACTIVE
+Elube,Brenda,Gama,ITY78,gama@gmail.com,Likoma,Employeed,099876789,700000.0,ACTIVE
